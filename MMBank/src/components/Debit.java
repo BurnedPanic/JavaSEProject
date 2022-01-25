@@ -8,5 +8,6 @@ public class Debit extends Flow{
 			LocalDate transactionDate) {
 		super(comment, amount, toAccountNumber, effect, transactionDate);
 	}
+	
 
 }

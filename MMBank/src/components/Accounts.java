@@ -46,6 +46,6 @@ public abstract class Accounts {
 	    }
 	      
 	    public String toString() {
-			return client + " " + "\n" + accountNumber +" " + label + " " + balance;
+			return client + "\n" + accountNumber +" " + label + " " + balance;
 		}    	 
 }

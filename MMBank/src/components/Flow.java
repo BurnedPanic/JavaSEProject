@@ -21,8 +21,6 @@ public abstract class Flow {
 		this.setEffect(effect);
 		this.setTransactionDate(transactionDate);
 	}
-	
-
 
 	public String getComment() {
 		return comment;

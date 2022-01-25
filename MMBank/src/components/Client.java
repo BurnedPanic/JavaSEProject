@@ -39,7 +39,7 @@ public class Client {
     }  
     
     public String toString() {
-		return clientNumber +" " + firstName + " " + name;
+		return clientNumber +". " + firstName + " " + name;
 	}
 }
 

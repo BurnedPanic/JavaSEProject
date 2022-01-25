@@ -10,7 +10,6 @@ public class Transfer extends Flow{
 		super(comment, amount, toAccountNumber, effect, transactionDate);
 	}
 	
-	
 	public int getFromAccountNumber() {
 		return fromAccountNumber;
 	}

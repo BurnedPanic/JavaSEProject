@@ -7,4 +7,5 @@ public class CurrentAccount extends Accounts{
 	public CurrentAccount(String label, components.Client Client) {
 		super(label, Client);
 	}
+	
 }
