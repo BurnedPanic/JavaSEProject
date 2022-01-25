@@ -80,8 +80,6 @@ public class Main {
 			for(Integer x : keys) {
 				System.out.println(accountIdentifier.get(x));
 			}
-		}
-		
-		System.out.println(accountIdentifier);		
+		}		
 	}
 }
