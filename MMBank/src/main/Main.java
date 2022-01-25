@@ -1,10 +1,18 @@
 package main;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Set;
 
+import components.Accounts;
 import components.Client;
+import components.Credit;
 import components.CurrentAccount;
+import components.Debit;
+import components.Flow;
 import components.SavingsAccount;
+import components.Transfer;
 
 //1.1.2 Creation of main class for tests
 //1.2.3 Creation of the table account
@@ -35,6 +43,22 @@ public class Main {
 	public static Client nathalia = new Client("Foureaux", "Nathalia");
 	public static Client alessandra = new Client("Foureaux", "Alessandra");    
 	
+	
+	public static Hashtable<Integer, String> accountIdentifier = new Hashtable<Integer, String>();
+	
+	public void fillAccountIdentifier() {
+		for (int f=0; Accounts.getAccountNumber() > f; f++) {
+			accountIdentifier.put(Accounts.getAccountNumber(), Accounts.class.toString());
+		}
+	}
+	
+	public Flow[] transactions = new Flow[4]; {
+	transactions[0] = new Debit("Debit 50 account 1", 50, 1, true, LocalDate.now().plusDays(2));
+	transactions[1] = new Credit("Credit 100.5 all current", 100.5, 1, true, LocalDate.now().plusDays(2));
+	transactions[2] = new Credit("Credit 1500 all savings", 1500, 1, true, LocalDate.now().plusDays(2));
+	transactions[3] = new Transfer("Transfer of 50 from account 1 to account 2", 50, 2, true, LocalDate.now().plusDays(2), 1);
+	}
+		
 	public static void main(String[] args) {	
 		CollectionOfClients.add(mateus);
 	    CollectionOfClients.add(nathalia);
@@ -50,6 +74,14 @@ public class Main {
 
 		for (int i=0; i < CollectionOfClients.size(); i++) {
 			System.out.println(CollectionOfClients.get(i));
-		}				
+		}
+			
+		Set<Integer> keys = accountIdentifier.keySet(); { 
+			for(Integer x : keys) {
+				System.out.println(accountIdentifier.get(x));
+			}
+		}
+		
+		System.out.println(accountIdentifier);		
 	}
 }

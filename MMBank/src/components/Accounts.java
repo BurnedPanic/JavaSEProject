@@ -6,12 +6,9 @@ public abstract class Accounts {
 	protected String label;
 	protected double balance;
 	protected static int count = 1;
-	protected int accountNumber;
+	protected static int accountNumber;
 	protected Client client;
-	   public Accounts(Client client) {
-	     this.client = client; 
-	   }
-	
+	   
 	public Accounts(String label, Client client) {
 		this.label = label;
 		this.client = client;
@@ -30,11 +27,11 @@ public abstract class Accounts {
 	        return balance;  
 	    }  
 	    public void setBalance(float balance) {  
-	        this.balance = balance;  
+	        this.balance = balance;
 	    }  
 	    
 		
-	    public int getAccountNumber() {  
+	    public static int getAccountNumber() {  
 	        return accountNumber;  
 	    }  
 	    public void setAccountNumber(int accountNumber) {  
